@@ -9,6 +9,10 @@
     <meta name="description" content="YONELFY ONE · Personal · Asistencia · Nómina" />
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="YONELFY ONE" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>YONELFY ONE</title>
     <script>
       // Apply the stored theme before first paint (no flash). Storage may be unavailable; fall back to system.
@@ -16,14 +20,21 @@
         var t = localStorage.getItem('yonelfy.theme');
         if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
       } catch (e) {}
+      // Installed app (home screen): behave like a native app — no pinch zoom. In the browser, pinch zoom stays
+      // available for accessibility.
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+        document.querySelector('meta[name=viewport]').setAttribute('content',
+          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover');
+        document.addEventListener('gesturestart', function (e) { e.preventDefault(); }, { passive: false });
+      }
     </script>
-    <script type="module" crossorigin src="./assets/index-DW4x87w_.js"></script>
+    <script type="module" crossorigin src="./assets/index-aclSaFIn.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-Dd_uD5pT.js">
     <link rel="modulepreload" crossorigin href="./assets/design-system-Na2QbOnK.js">
     <link rel="modulepreload" crossorigin href="./assets/preload-helper-uBIymjUX.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-i4V-DTfM.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-y1fhWY8Q.css">
   <link rel="manifest" href="./manifest.webmanifest"></head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
