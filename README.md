@@ -1,5 +1,5 @@
-﻿# YONELFY ONE â€” Web
+# YONELFY ONE — Web
 
-CompilaciÃ³n publicada de YONELFY ONE (Personal Â· Asistencia Â· NÃ³mina). El cÃ³digo fuente es privado.
+Compilación publicada de YONELFY ONE (Personal · Asistencia · Nómina). El código fuente es privado.
 
-Â© 2026 Ing. Yonelfy Bonilla. Todos los derechos reservados.
+© 2026 Ing. Yonelfy Bonilla. Todos los derechos reservados.
