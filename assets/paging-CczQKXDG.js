@@ -1,0 +1,1 @@
+var e=class extends Error{limit;constructor(e){super(`El resultado supera ${e.toLocaleString(`es-DO`)} registros. Reduzca el período o use filtros.`),this.limit=e}};async function t(t,n=5e4){let r=[];for(;;){let{data:i,error:a}=await t(r.length,r.length+1e3-1);if(a)throw a;if(!i?.length)return r;if(r.push(...i),r.length>n)throw new e(n)}}export{t};
